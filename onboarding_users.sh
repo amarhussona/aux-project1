@@ -34,17 +34,17 @@ PASSWORD=password
 		echo
 
 # Create an authorized-key file
-		su - -c "touch ~/.ssh/authorized-keys" $user
+		su - -c "touch ~/.ssh/authorized_keys" $user
 		echo "Authorized key file created"
 		echo
 
 # Set permission for the key file
-		su - -c "chmod 600 ~/.ssh/authorized-keys" $user
+		su - -c "chmod 600 ~/.ssh/authorized_keys" $user
 		echo "user permission for the authorized key file set"
 		echo
 		
 # Create and set public key for users in the server
-		cp -R "/home/ubuntu/Shell/id_rsa.pub" "/home/$user/.ssh/authorized-keys"
+		cp -R "/home/ubuntu/Shell/id_rsa.pub" "/home/$user/.ssh/authorized_keys"
 		echo "Copied the public key to new user account on the server"
 		echo
 		echo
